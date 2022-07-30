@@ -86,6 +86,7 @@
 - Displays the file contents in the terminal.
 - We cannot edit this information.
 - This is only READ-able.
+- (Windows) type -> Usage: type <file_name>
 
 ## Deletion
 - Delete a file
@@ -99,4 +100,3 @@
 - (Windows) rmdir -> Short for Remove Directory
 - (Linux) rm -rf -> Short for remove --recursive --force
 
-## deletion and copy/move paste 
