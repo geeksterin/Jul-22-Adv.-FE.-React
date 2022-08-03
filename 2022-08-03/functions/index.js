@@ -74,7 +74,7 @@
 
 function fn(hint) {
   //Logic to make the browser show dhfkjshfjshgdjkh;
-  return ""; // the input taken
+  return prompt(hint); // the input taken
 }
 
 const my_name = prompt("Enter your name");
