@@ -98,20 +98,6 @@ for(const <key> of <object_variable>) {
 
 **Note: the forEach in Java is VERY DIFFERENT than the forEach in JavaScript.**
 
-## Functions
-### Named
-### Attributes vs Parameters
-### default parameters
-### Return
-### Undefined
-
-### Anonymous functions
-### Function expression
-### IIFE
-### Arrow functions (different ways of writing)
-### function declaration vs arrow functions.
-
-
 ## Assignment:
 1. Write a logic to check whether a number is a prime number or not.
 2. FizzBuzz
