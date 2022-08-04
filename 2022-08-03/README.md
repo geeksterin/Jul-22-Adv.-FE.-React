@@ -80,19 +80,3 @@ if( num % 15 == 0) {
 "a-z";
 5 -> fn -> hebak
 5 -> fn -> psanv
-
-
-
-
-
-
-
-
-
-
-### Arrow functions (different ways of writing)
-### function declaration vs arrow functions.
-### NaN
-### Concatenation
-
-## hoisting and TDZ
