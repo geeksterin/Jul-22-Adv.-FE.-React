@@ -68,16 +68,3 @@
 
 ## Task 2:
 - Similar to what we did for sum. Do for multiplication but for 3 levels. mul(2)(5)(20);
-
-
-
-
-### Spread Operator
-### NaN
-### Concatenation
-### Pure function
-
-## hoisting and TDZ
-
-### function declaration vs arrow functions.
-## this -> call/apply/bind (during OOP)
