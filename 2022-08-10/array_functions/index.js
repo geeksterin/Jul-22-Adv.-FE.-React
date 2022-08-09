@@ -161,14 +161,54 @@ console.log("DEFER");
 
 // console.log(sum);
 
-const numbers = [1, 2, 3, 4, 5, 7, -10];
+// const numbers = [1, 2, 3, 4, 5, 7, -10];
 
-//EVERY element of my array is positive?
-const are_all_positive = numbers.every((e) => {
-  if(e > 0) {
-    return true;
-  }
-  return false;
-});
+// //EVERY element of my array is positive?
+// const are_all_positive = numbers.every((e) => {
+//   if(e > 0) {
+//     return true;
+//   }
+//   return false;
+// });
 
-console.log(are_all_positive);
+// console.log(are_all_positive);
+
+
+// const string = "kjhfjkshdfjkksfhsfhiwueicsbsjkc";
+
+// //Frequency count; {a => 0, b => c};
+
+// const fq = string.split("").reduce((c, e) => {
+//   if(c[e] !== undefined) {
+//     c[e] = c[e] + 1;
+//   } else {
+//     c[e] = 1;
+//   }
+//   return c;
+// }, {});
+
+// console.log(fq);
+
+// const arr = [1, 2, 3, 4];
+
+// arr.forEach((e) => {
+//   console.log(e);
+// });
+
+// const addition = (a, b) => {
+//   return a + b;
+// }
+
+// console.log(addition(10, 5));
+// console.log(addition(_ => {
+//   console.log("ABCD")
+// }));
+
+// const str = "The quick brown fox jumped over the lazy dog";
+// let word_arr = str.split(" ");
+// // console.log(word_arr);
+
+// word_arr = word_arr.map(e => e[0].toUpperCase() + e.substring(1));
+// // console.log(word_arr);
+// const result = word_arr.join(" ");
+// console.log(result);

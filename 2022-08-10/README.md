@@ -123,6 +123,7 @@ Object.keys.forEach
 ### Concatenation
 ### Pure function
 ### Casing
+### async / await (callback hell)
 ## hoisting and TDZ
 
 ### function declaration vs arrow functions.
