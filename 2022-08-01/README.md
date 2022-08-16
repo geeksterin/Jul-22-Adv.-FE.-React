@@ -84,15 +84,6 @@ For example:
 **In JS, array is an Object.**
 
 
-## Primitive vs Non Primitive
-## ES
-## defer
-## casing
-## scope
-## Object.freeze()
-## string templating
-## Concatenation
-
 # Asignment:
 1. Create an array and calculate the sum of that array and console it.
 2. Create another array and console the largest number from that array.
