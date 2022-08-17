@@ -74,48 +74,8 @@
   - Although this is commonly for input tags, however, it can also be used for other elements as well.
   - The Node List returned is an array, which makes it easy to loop upon.
 
- 
-## Assignments:
-### Task 1:
-- Create a table using HTML and try to give alternate colors to rows, but not using any pseudo claases, instead of that, use JS to get the rows, loop on them, check odd or even, then color accordingly.
-
-### Task 2:
-- Create a Light/Dark theme
-- Have a checkbox and a text.
-- If the checkbox is checked, then change the background of the body to black and color of the text to while.
-- If the checkbox is unchecked, then change the background of the body to white and color of the text to black.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- querySelector()
-- querySelectorAll()
-
-
-- Difference b/w HTML Collection and Node List.
-
 **Name attribute for inputs is used as an identifier to recogonize the data in the backend part of the project.**
 
-
-- createElement - no
-- onClick, onKeyUp, events - no
-- Event object (addEventListener).
 
 ## Adding of Script
 ### Default
@@ -131,65 +91,13 @@
 - https://www.growingwiththeweb.com/images/2014/02/26/async-vs-defer-twitter.png
 
 
+ 
+## Assignments:
+### Task 1:
+- Create a table using HTML and try to give alternate colors to rows, but not using any pseudo claases, instead of that, use JS to get the rows, loop on them, check odd or even, then color accordingly.
 
-
-
-
-
-
-
-
-
-## BOM
-- BOM is parent of DOM.
-
-### Spread Operator | Rest - Recap | Destructuring
-
-## Modules (import, export)
-### Concatenation
-### Casing
-
-
-
-- entries()
-- hasOwnProperty()
-
-
-
-- Interview Examples:
--- Try to have keys as not a string.
-
-
-### IMPORTANT
-- Object.freeze() / Object.isFrozen()
-- Object.seal() / Object.isSealed()
-
-Object.keys.forEach
-
-
-## Multi dimensional arrays 
-
-- <String>.split
-### Shallow Copy | Deep Copy
-
-### NaN
-
-### Pure function
-
-### async / await (callback hell)
-
-### function declaration vs arrow functions (using this).
-## this -> call/apply/bind (during OOP)
-## new keyword;
-
-## setInterval/clearInterval + setTimeout/clearTimeout
-
-### RegEX
-## Various functions of console.
-
-## Primitive vs Non Primitive
-
-## casing
-## Object.freeze()
-## string templating
-## Concatenation
+### Task 2:
+- Create a Light/Dark theme
+- Have a checkbox and a text.
+- If the checkbox is checked, then change the background of the body to black and color of the text to while.
+- If the checkbox is unchecked, then change the background of the body to white and color of the text to black.
