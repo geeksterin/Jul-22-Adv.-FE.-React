@@ -2,6 +2,8 @@
 
 ## Recap - Doubt
 
+## Important from Interview Point of View.
+
 const a = {};
 const b = { key: 'b' }; // "[object Object]"
 const c = { key: 'c' }; // "[object Object]"
