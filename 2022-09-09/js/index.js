@@ -60,3 +60,25 @@ let v4 = parseInt(v3);
 v3 = Number(v3);
 console.log(v3);
 console.log(v4);
+
+
+const arr = [26, 27, 26, 26, 26, 27, 27, 28, 28, 29, 30];
+
+const unique_f = arr.filter((e, i, original_arr) => {
+  if(original_arr.lastIndexOf(e) !== i) {
+    return false
+  } else {
+    return true
+  }
+});
+
+
+const unique = arr.map((e, i, original_arr) => {
+  if(original_arr.lastIndexOf(e) !== i) {
+    return undefined;
+  } else {
+    return e;
+  }
+})
+console.log(unique);
+console.log(unique_f);

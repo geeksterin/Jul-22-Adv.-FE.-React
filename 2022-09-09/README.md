@@ -77,7 +77,6 @@ console.log(a); // a as a number
 
 
 
-
 // [] == []
 // [] == ![]
 // [] !== []
