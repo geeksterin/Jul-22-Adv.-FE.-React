@@ -16,107 +16,14 @@
 - For data, we will use this - https://raw.githubusercontent.com/aayusharyan/emojee/main/emojiList.js
 
 ## useEffect
+- This is a built in hook. Built into react. We need to import this in order to use it. This is a named export.
+- This is a hook (function) which accepts 2 things.
+  - Callback function.
+  - Dependency array.
+- If anything from that dependency array is changed, then it will call that callback function.
+- Usage - If we want to execute some certain funcction if the state value changes.
+- The state can be our created state (using useState) or it can also be an imported state from another hook.
+- This is used to implement side Effect.
+- Side effect is the functionality that we implement which is not the CORE effect.
 
-
-
-
-
-
-
-
-## REST API
-
-
-
-
-
-## Data Binding
-
-# Further Reading:
-- Local Storage
-- Session Storage
-- IndexedDB
-
-
-## Fragment
-
-### Callback Hell and Then Chaining
-
-
-### async / await (callback hell)
-### Event Loop
-
-# fetch with options.
-
-
-# JSON
-
-# useEffect
-- API Calls
-
-- Event Object
-
-
-
-// [] == []
-// [] == ![]
-// [] !== []
-
-
-
-
-
-
-### IMPORTANT
-- Object.freeze() / Object.isFrozen()
-- Object.seal() / Object.isSealed()
-
-## Unit of measurement
-
-- CDN Approach
-
-## Linting / Linter
-
-- Changing of
-src / href
-id
-classList
-
-
-
-
-- entries()
-- hasOwnProperty()
-
-
-
-
-
-Object.keys.forEach
-
-
-## Multi dimensional arrays 
-
-- <String>.split
-### Shallow Copy | Deep Copy
-
-### NaN
-
-### Pure function
-
-
-
-### OOP
-### oop with this keyword.
-### getters and setters
-### function declaration vs arrow functions (using this).
-## this -> call/apply/bind (during OOP)
-## new keyword;
-
-## setInterval/clearInterval + setTimeout/clearTimeout
-
-### RegEX
-## Various functions of console.
-
-### Optional (If we get time)
-- localstorage (session vs cookie)
+**Hooks were introduced in React 16.8.**

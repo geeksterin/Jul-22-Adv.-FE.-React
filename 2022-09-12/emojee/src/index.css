@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+:root {
+  --light: #D9D9D9;
+  --white: #FFFFFF;
+  --blue: #284B63;
+  --green-blue: #3C6E71;
+  --grey: #353535;
+}
+
+body {
+  background-color: var(--light);
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+.container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.item {
+  background-color: var(--white);
+  border-radius: 5px;
+  display: inline-block;
+  width: 10rem;
+  align-self: stretch;
+  text-align: center;
+  padding: 0px 0.5rem;
+  transition: all 0.2s linear;
+}
+
+.item:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 5px 5px 10px var(--green-blue);
+  transform: scale(1.1);
+}
+
+.emoji {
+  font-size: 250%;
+}
