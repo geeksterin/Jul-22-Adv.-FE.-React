@@ -1,0 +1,30 @@
+/* #h2 {
+  font-size: 3em;
+}
+
+#d2 {
+  font-size: 20px;
+}
+
+#d3 {
+  font-size: 40px;
+}
+
+#box {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-color: blue;
+} */
+
+body {
+  margin: 0px;
+}
+
+div {
+  display: inline-block;
+  /* width: 50vw; */
+  /* width: 1Q; */
+  height: 50vh;
+  background-color: red;
+}

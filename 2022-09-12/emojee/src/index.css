@@ -50,3 +50,45 @@ body, h1, h2, h3, h4, h5, h6, p {
 .emoji {
   font-size: 250%;
 }
+
+nav {
+  background: var(--white);
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.1rem 0.75rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav > h2 {
+  display: inline;
+}
+
+nav > a {
+  padding-top: 2px;
+  float: right;
+  text-decoration: none;
+}
+
+.search {
+  text-align: center;
+  margin: 1rem;
+}
+
+.search > input {
+  border-radius: 5px;
+  border: 2px solid var(--light);
+  font-size: 110%;
+  margin-bottom: 0.5rem;
+}
+
+body {
+  scrollbar-color: red;
+}
+
+.no-result {
+  text-align: center;
+}
+
+.copied, .copied:hover {
+  background-color: var(--green-blue);
+}

@@ -1,8 +1,9 @@
 const Nav = () => {
   return (
-    <div>
-      <h2>Nav section</h2>
-    </div>
+    <nav>
+      <h2>Emojee</h2>
+      <a href="/" target="_blank">Github</a>
+    </nav>
   )
 }
 

@@ -14,6 +14,11 @@ const Main = () => {
   useEffect(_ => {
     //Filter based on description, category, alases
     const filterList = emojiList.filter(singleEmoji => {
+
+      if(singleEmoji.emoji === keyword) {
+        return true;
+      }
+
       if(singleEmoji.description.startsWith(keyword)) {
         return true;
       }
@@ -34,22 +39,18 @@ const Main = () => {
 
   return (
     <main>
-      <input type="text" placeholder="Filter 🔎" onKeyUp={typed}/>
-
-      <h3>Result for - {keyword} </h3>
+      <div className='search'>
+        <input type="text" placeholder="Filter 🔎" onKeyUp={typed}/>
+        {keyword === "" ? false : ( <h3>Result for - {keyword} </h3> )}
+      </div>
 
       <hr />
       {list.length === 0 ? (
-        <p>No Emoji Found</p>
-
+        <h3 className='no-result'>No Emoji Found 😟</h3>
       ) : (
-
         <EmojiContainer list={list} />
-
       )}
 
-
-      
     </main>
   )
 }
