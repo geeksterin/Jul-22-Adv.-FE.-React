@@ -122,3 +122,14 @@ btn.addEventListener("click", _ => {
   .then(data => render(data));
 
 });
+
+//Doubts
+
+const sai = ["sai", "nagasai", "arun", "deepak"];
+
+sai.map(singleWord => {
+  singleWord = singleWord.split("");
+  singleWord.forEach(singleCharacter => {
+    console.log(singleCharacter);
+  })
+})
