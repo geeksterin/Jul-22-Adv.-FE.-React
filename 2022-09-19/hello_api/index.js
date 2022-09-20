@@ -131,5 +131,5 @@ sai.map(singleWord => {
   singleWord = singleWord.split("");
   singleWord.forEach(singleCharacter => {
     console.log(singleCharacter);
-  })
-})
+  });
+});

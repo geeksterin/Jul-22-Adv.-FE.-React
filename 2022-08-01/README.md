@@ -1,8 +1,8 @@
 # Aug-01, 2022
 
 ## What is JavaScript?
-- JavaScript is a Asynchronous Single-Threaded Dynamic Interperted Programming Language.
--> JS is a single-threaded asynchronous scripting language.
+- JavaScript is a Synchronous Single-Threaded Dynamic Interperted Programming Language.
+-> JS is a single-threaded synchronous scripting language.
 - Single Threaded -> At max, JS will execute only 1 task at a time.
 - Asynchronous -> The ability of JS to execute the functions/instructions out of their sequence.
 - Loosely Typed (Dynamic) -> Data-type is not a restriction in JS.
