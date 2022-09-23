@@ -1,9 +1,17 @@
-const RepoList = () => {
+const RepoList = ({ data }) => {
+  console.log(data);
   return (
-    <div>
+    <div className="card">
       <ul>
-        <li>Repo 1</li>
-        <li>Repo 2</li>
+        {data.map((singleRepo, idx) => {
+          return (
+            <li key={idx}>
+              <a href={singleRepo.html_url} target="_blank">
+                {singleRepo.name}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   )

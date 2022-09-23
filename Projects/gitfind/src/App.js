@@ -9,33 +9,38 @@ function App() {
   const [detail, setDetail] = useState({});
   const [repoList, setRepoList] = useState([]);
   const [followerList, setFollowerList] = useState([]);
+  const [username, setUsername] = useState("");
 
   useEffect(_ => {
     (async _ => {
-      const response = await github.get("/aayusharyan");
+      const response = await github.get(`/${username}`);
       setDetail(response.data);
     })();
-  }, []);
+  }, [username]);
 
   useEffect(_ => {
     (async _ => {
-      const response = await github.get('/aayusharyan/repos');
+      const response = await github.get(`/${username}/repos`);
       setRepoList(response.data);
     })();
-  }, []);
+  }, [username]);
 
   useEffect(_ => {
     (async _=> {
-      const response = await github.get('/aayusharyan/followers');
+      const response = await github.get(`/${username}/followers`);
       setFollowerList(response.data);
     })();
-  }, []);
+  }, [username]);
+
+  const searchedUsername = keyword => {
+    setUsername(keyword);
+  }
 
   return (
     <main>
-      <Search />
+      <Search searchedUsername={searchedUsername} />
       <Detail data={detail} />
-      <RepoList />
+      <RepoList data={repoList} />
       <Footer />
     </main>
   );

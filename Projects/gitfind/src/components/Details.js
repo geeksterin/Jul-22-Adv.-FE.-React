@@ -1,13 +1,13 @@
 const Detail = ({data}) => {
   return (
-    <div>
+    <div className="card detail">
       <img src={data.avatar_url} alt="Profile" />
       <h3>{data.name}</h3>
       <h3>{data.login}</h3>
-      <p>Created At</p>
-      <button>Repo List</button>
-      <button>Followers</button>
-      <button>Following List</button>
+      <p>{data.created_at}</p>
+      <button>{data.public_repos}</button>
+      <button>{data.followers}</button>
+      <button>{data.following}</button>
     </div>
   )
 }

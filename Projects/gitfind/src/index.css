@@ -1,0 +1,33 @@
+:root {
+  --gray: #04040A;
+  --dark-gray: #181b22;
+  --black: #111117;
+  --dark-black: #0D1117;
+  --green: #458341;
+  --light: #F0F6FC;
+  --light-gray: #8B949E;
+}
+
+body, h6, h5, h4, h3, h2, h1, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  background-color: var(--gray);
+  color: var(--light);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+main > .card {
+  width: 95vw;
+  max-width: 500px;
+  background-color: #455A64;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
