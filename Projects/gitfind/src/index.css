@@ -1,33 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar&display=swap');
+
 :root {
-  --gray: #04040A;
-  --dark-gray: #181b22;
-  --black: #111117;
-  --dark-black: #0D1117;
-  --green: #458341;
-  --light: #F0F6FC;
-  --light-gray: #8B949E;
+  --white: #FFFFFF;
+  --dark: #00171F;
+  --navy-blue: #003459;
+  --dark-blue: #007EA7;
+  --blue: #00A8E8;
 }
 
 body, h6, h5, h4, h3, h2, h1, p {
+  font-family: 'Mukta Malar', sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
 main {
-  background-color: var(--gray);
-  color: var(--light);
+  background-color: var(--dark);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
 }
 
 
 main > .card {
   width: 95vw;
   max-width: 500px;
-  background-color: #455A64;
+  background-color: var(--white);
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+.search > form > button {
+  width: 5rem;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  border-style: solid;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.search > form > button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.search > form > input {
+  width: calc(100% - 6rem);
+  margin-right: 0.5rem;
+}
+
+.search > form > input:focus {
+  outline-color: var(--dark-blue);
+}
+
+
+.detail > img {
+  border-radius: 50%;
+  width: 10rem;
+  margin: 0.5rem;
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.section-right {
+  display: inline-block;
+  margin: 2.3rem 0.5rem 0px; /* top | horizontal (left, right) | bottom */
+  vertical-align: top;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  width: 10rem;
+  padding: 0.5rem 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  border-radius: 2px;
+}
+
+.buttons > button > span {
+  display: block;
+  font-weight: bold;
+}
+
+.buttons > button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.detail a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.detail a:visited {
+  color: var(--navy-blue);
+}
+
+.incorrect {
+  color: red;
+}
+
+.incorrect-input {
+  outline-color: red !important;
+  border-color: red !important;
+  border-style: solid;
 }

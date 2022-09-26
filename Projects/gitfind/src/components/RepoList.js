@@ -2,7 +2,7 @@ const RepoList = ({ data }) => {
   console.log(data);
   return (
     <div className="card">
-      <ul>
+      <ol>
         {data.map((singleRepo, idx) => {
           return (
             <li key={idx}>
@@ -12,7 +12,8 @@ const RepoList = ({ data }) => {
             </li>
           );
         })}
-      </ul>
+      </ol>
+      <button>Load More</button>
     </div>
   )
 }

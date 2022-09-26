@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-const Search = ({ searchedUsername }) => {
+const Search = ({ searchedUsername, isSuccessful }) => {
 
   const inputRef = useRef();
 
@@ -13,10 +13,14 @@ const Search = ({ searchedUsername }) => {
 
   return (
     <div className='card search'>
+      <h1>Search for Username</h1>
       <form onSubmit={searched}>
-        <input type="text" ref={inputRef} />
+        <input type="text" ref={inputRef} className={isSuccessful === false ? "incorrect-input" : ""} />
         <button>Search</button>
       </form>
+      {isSuccessful === false ? (
+        <p className='incorrect'>Invalid Username</p>
+      ) : false}
     </div>
   )
 }
