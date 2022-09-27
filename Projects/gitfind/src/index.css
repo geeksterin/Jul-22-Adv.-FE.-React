@@ -116,3 +116,41 @@ main > .card {
   border-color: red !important;
   border-style: solid;
 }
+
+.active {
+  outline: 3px solid var(--blue) !important;
+}
+
+.following-list img, .followers-list img  {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.repo-list th {
+  text-align: left;
+}
+
+.load-more {
+  margin-top: -2.5rem;
+}
+
+.load-more button { 
+  width: 100%;
+  padding: 5px 0px;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  transition: all 0.15s linear;
+  border-radius: 2px;
+}
+
+.load-more button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.footer {
+  text-align: center;
+}

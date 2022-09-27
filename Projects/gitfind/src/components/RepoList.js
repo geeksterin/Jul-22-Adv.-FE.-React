@@ -1,19 +1,31 @@
 const RepoList = ({ data }) => {
-  console.log(data);
   return (
-    <div className="card">
-      <ol>
+    <div className="card repo-list">
+      <h2>Repo List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+
         {data.map((singleRepo, idx) => {
+          console.log(singleRepo);
           return (
-            <li key={idx}>
-              <a href={singleRepo.html_url} target="_blank">
-                {singleRepo.name}
-              </a>
-            </li>
+            <tr key={idx}>
+              <td>{idx + 1}</td>
+              <td>
+                <a href={singleRepo.html_url} target="_blank" rel="noreferrer">
+                  {singleRepo.name}
+                </a>
+              </td>
+            </tr>
           );
         })}
-      </ol>
-      <button>Load More</button>
+        </tbody>
+      </table>
     </div>
   )
 }
