@@ -81,7 +81,11 @@
 
 
 
+## IGDB
 
+## Quote API
+
+## Alpaca API
 
 
 
