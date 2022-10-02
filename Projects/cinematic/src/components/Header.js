@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,6 +53,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Header = _ => {
+
+  const navigate = useNavigate();
+
+  const keyPressed = e => {
+    if(e.code == "Enter") {
+      const query = e.target.value;
+      navigate(`/search?q=${query}`);
+      // console.log(query);
+    }
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -71,6 +83,7 @@ const Header = _ => {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              onKeyUp={keyPressed}
             />
           </Search>
         </Toolbar>

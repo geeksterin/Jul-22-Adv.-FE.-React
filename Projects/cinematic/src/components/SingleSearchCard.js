@@ -1,0 +1,41 @@
+import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import { Chip } from '@mui/material';
+import { Stack } from '@mui/material';
+
+const SingleSearchCard = ({ data }) => {
+  const theme = useTheme();
+
+  return (
+    <Card sx={{ display: 'flex' }}>
+      <CardMedia
+        component="img"
+        sx={{ width: 126 }}
+        image={data.Poster !== "N/A" ? data.Poster : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"}
+        alt="Live from space album cover"
+      />
+
+        <CardContent>
+          <Stack spacing={1} alignItems="flex-start" justifyContent="flex-start">
+            <Typography component="div" variant="h5">
+              {data.Title}
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary" component="div">
+              Released {data.Year}
+            </Typography>
+            <Chip label={data.Type} sx={{textTransform: "capitalize"}}/>
+          </Stack>
+        </CardContent>
+    </Card>
+  );
+}
+export default SingleSearchCard;
