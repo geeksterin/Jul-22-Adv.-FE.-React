@@ -11,24 +11,29 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { Chip } from '@mui/material';
 import { Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const SingleSearchCard = ({ data }) => {
   const theme = useTheme();
 
   return (
     <Card sx={{ display: 'flex' }}>
-      <CardMedia
-        component="img"
-        sx={{ width: 126 }}
-        image={data.Poster !== "N/A" ? data.Poster : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"}
-        alt="Live from space album cover"
-      />
+      <Link to={`/detail/${data.imdbID}`}>
+        <CardMedia
+          component="img"
+          sx={{ width: 126 }}
+          image={data.Poster !== "N/A" ? data.Poster : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"}
+          alt="Live from space album cover"
+        />
+      </Link>
 
         <CardContent>
           <Stack spacing={1} alignItems="flex-start" justifyContent="flex-start">
-            <Typography component="div" variant="h5">
-              {data.Title}
-            </Typography>
+            <Link to={`/detail/${data.imdbID}`}>
+              <Typography component="div" variant="h5">
+                {data.Title}
+              </Typography>
+            </Link>
             <Typography variant="subtitle1" color="text.secondary" component="div">
               Released {data.Year}
             </Typography>
