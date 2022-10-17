@@ -1,6 +1,23 @@
+import useLocalStorage from "use-local-storage";
+import FavouriteMovieCard from "../components/FavouriteMovieCard";
+import { Box, Grid, Card, Typography } from "@mui/material";
+import Masonry from '@mui/lab/Masonry';
+
 const Home = _ => {
+  const [favourites, setFavourites] = useLocalStorage("favourites", "[]");
+
   return (
-    <h2>Home</h2>
+    <>
+      <Box p={4}>
+        <Typography variant="h5" textAlign="center">Welcome to My Collection</Typography>
+        <hr />
+        <Masonry columns={4} spacing={2}>
+          {JSON.parse(favourites).map((e, i) => {
+            return <FavouriteMovieCard id={e} key={i} />
+          })}
+        </Masonry>
+      </Box>
+    </>
   )
 }
 

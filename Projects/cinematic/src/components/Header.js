@@ -9,6 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -74,7 +75,9 @@ const Header = _ => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Cinematic
+            <Link to="/" style={{textDecoration: "none", color: "white"}}>
+              Cinematic
+            </Link>
           </Typography>
           <Search>
             <SearchIconWrapper>

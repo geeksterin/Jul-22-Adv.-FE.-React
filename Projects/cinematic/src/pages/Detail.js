@@ -2,14 +2,41 @@ import { useParams } from 'react-router-dom';
 import { omdb } from '../utils';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Avatar, Box, Chip, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Chip, Stack, Typography, IconButton } from '@mui/material';
 import axios from 'axios';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import useLocalStorage from "use-local-storage";
 
 const Detail = _ => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [data, setData] = useState({});
   const [flag, setFlag] = useState(false);
+  const [favourites, setFavourites] = useLocalStorage("favourites", "[]");
+  const [isFavourite, setFavourite] = useState(false);
+
+  useEffect(_ => {
+    const favs = JSON.parse(favourites);
+    if(favs.includes(id)) {
+      setFavourite(true);
+    } else {
+      setFavourite(false);
+    }
+  }, [favourites, id]);
+
+  const toggleFavourite = _ => {
+    const favs = JSON.parse(favourites);
+    if(isFavourite) {
+      const idx = favs.indexOf(id);
+      favs.splice(idx, 1);
+      setFavourite(false);
+    } else {
+      favs.push(id);
+      setFavourite(true);
+    }
+    setFavourites(JSON.stringify(favs));
+  }
 
   useEffect(_ => {
     (async _ => {
@@ -41,6 +68,10 @@ const Detail = _ => {
             <Box>
               <Typography variant="h4">
                 {data.Title}
+                &nbsp;
+                <IconButton size="large" color="error" onClick={toggleFavourite}>
+                  {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon /> }
+                </IconButton>
               </Typography>
               <Typography>
                 Released {data.Year}
@@ -59,7 +90,7 @@ const Detail = _ => {
 
                 <Chip label={data.Director} />
               </Stack>
-              <Stack mt={2} direction="row" spacing={2} alignItems="center">
+              <Stack mt={5} direction="row" spacing={2} alignItems="center">
                 <img src={flag} height={40} style={{outline: "1px solid #1976d2", outlineOffset: "2px"}} />
                 <Typography variant='overline'>
                   {data.Country}
