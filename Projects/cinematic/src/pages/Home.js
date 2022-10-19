@@ -1,10 +1,10 @@
 import useLocalStorage from "use-local-storage";
 import FavouriteMovieCard from "../components/FavouriteMovieCard";
-import { Box, Grid, Card, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Masonry from '@mui/lab/Masonry';
 
 const Home = _ => {
-  const [favourites, setFavourites] = useLocalStorage("favourites", "[]");
+  const [favourites] = useLocalStorage("favourites", "[]");
 
   return (
     <>

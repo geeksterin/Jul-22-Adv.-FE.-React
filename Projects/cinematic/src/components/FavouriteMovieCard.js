@@ -11,7 +11,6 @@ const FavouriteMovieCard = ({ id }) => {
     (async _ => {
       const response = await omdb.get(`?i=${id}`);
       setData(response.data);
-      console.log(response.data);
     })();
   }, [id]);
 
@@ -24,7 +23,7 @@ const FavouriteMovieCard = ({ id }) => {
       <Grid item xs={3}>
         <Card>
           <CardActionArea onClick={clicked}>
-            <CardMedia component="img" image={data.Poster} />
+            <CardMedia component="img" image={data.Poster !== "N/A" ? data.Poster : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"} />
             <CardContent>
               <Typography variant="h6">
                 {data.Title}

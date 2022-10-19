@@ -1,23 +1,24 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { Chip } from '@mui/material';
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
+import SingleSearchCardSkeleton from './SingleSearchCardSkeleton';
 
 const SingleSearchCard = ({ data }) => {
-  const theme = useTheme();
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  
+  useEffect(_ => {
+    setTimeout(_ => setShowSkeleton(false), 10000);
+  });
 
   return (
-    <Card sx={{ display: 'flex' }}>
+    <>
+    {showSkeleton ? <SingleSearchCardSkeleton /> : (
+      <Card sx={{ display: 'flex' }}>
       <Link to={`/detail/${data.imdbID}`}>
         <CardMedia
           component="img"
@@ -40,7 +41,9 @@ const SingleSearchCard = ({ data }) => {
             <Chip label={data.Type} sx={{textTransform: "capitalize"}}/>
           </Stack>
         </CardContent>
-    </Card>
+      </Card>
+    )}
+    </>
   );
 }
 export default SingleSearchCard;

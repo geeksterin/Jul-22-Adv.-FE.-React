@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { omdb } from '../utils';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Avatar, Box, Chip, Stack, Typography, IconButton } from '@mui/material';
+import { Box, Chip, Stack, Typography, IconButton } from '@mui/material';
 import axios from 'axios';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -44,11 +44,10 @@ const Detail = _ => {
         if(response.data.Response === "False") {
           navigate("/404");
         } else {
-          console.log(response.data);
           setData(response.data);
         }
     })();
-  }, [id]);
+  }, [id, navigate]);
 
   useEffect(_ => {
     if(data.Country?.length > 0) {
@@ -64,7 +63,7 @@ const Detail = _ => {
       <Box p={5}>
         <Stack>
           <Stack direction="row" spacing={5}>
-            <img src={data.Poster} />
+            <img src={data.Poster !== "N/A" ? data.Poster : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"} alt="Poster"/>
             <Box>
               <Typography variant="h4">
                 {data.Title}
@@ -91,7 +90,9 @@ const Detail = _ => {
                 <Chip label={data.Director} />
               </Stack>
               <Stack mt={5} direction="row" spacing={2} alignItems="center">
-                <img src={flag} height={40} style={{outline: "1px solid #1976d2", outlineOffset: "2px"}} />
+                {flag ? (
+                  <img src={flag} height={40} alt="Flag" style={{outline: "1px solid #1976d2", outlineOffset: "2px"}} />
+                ) : false}
                 <Typography variant='overline'>
                   {data.Country}
                 </Typography>
